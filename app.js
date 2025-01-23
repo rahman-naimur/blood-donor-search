@@ -1,34 +1,43 @@
 // Google Sheet Configuration
-const SHEET_ID = "1vBNliHYqx7GzHyJfPbDjqrFjVIgl0sESmEkZMQORDxQ"; // Your Google Sheet ID
-const API_KEY = "AIzaSyDzb9-RmVAWLYx9WEolocZcNm0ORvxSSl0"; // Your Google API Key
+const SHEET_ID = "1vBNliHYqx7GzHyJfPbDjqrFjVIgl0sESmEkZMQORDxQ";
+const API_KEY = "AIzaSyDzb9-RmVAWLYx9WEolocZcNm0ORvxSSl0";
 const BASE_URL = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values`;
 
-// Function to Fetch Donor Data Based on Blood Group
-async function fetchDonors(bloodGroup) {
-  const range = "Form responses 1"; // The name of the sheet/tab containing donor data
+// Fetch Data from Google Sheet
+async function fetchDonors() {
+  const bloodGroup = document.getElementById("blood-group").value.trim();
+  if (!bloodGroup) {
+    displayError("Please enter a blood group.");
+    return;
+  }
+
+  const range = "Form responses 1"; // The name of your Google Sheet tab
   const url = `${BASE_URL}/${range}?key=${API_KEY}`;
+  console.log("Fetching from URL:", url);
 
   try {
     const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
     const data = await response.json();
 
     if (data.values && data.values.length > 1) {
       const headers = data.values[0];
       const rows = data.values.slice(1);
 
-      // Filter data based on blood group
-      const filteredDonors = rows.filter(row => row[3] === bloodGroup); // Assuming column 4 is blood group
+      const filteredDonors = rows.filter(row => row[3] === bloodGroup); // Filter donors by blood group
       displayDonors(filteredDonors, headers);
     } else {
-      displayError("No data found or invalid sheet format.");
+      displayError("No data found in the sheet or invalid sheet format.");
     }
   } catch (error) {
     console.error("Error fetching data:", error);
-    displayError("Failed to fetch data. Please check your API Key and Sheet ID.");
+    displayError("Failed to fetch data. Check your API key and sheet settings.");
   }
 }
 
-// Function to Display Donor Data
+// Display Donors in the HTML Table
 function displayDonors(donors, headers) {
   const resultSection = document.getElementById("result");
   resultSection.innerHTML = "";
@@ -38,11 +47,9 @@ function displayDonors(donors, headers) {
     return;
   }
 
-  // Create a table for the results
   const table = document.createElement("table");
   table.classList.add("donor-table");
 
-  // Create table header
   const headerRow = document.createElement("tr");
   headers.forEach(header => {
     const th = document.createElement("th");
@@ -51,13 +58,12 @@ function displayDonors(donors, headers) {
   });
   table.appendChild(headerRow);
 
-  // Add donor rows to the table
   donors.forEach(donor => {
     const row = document.createElement("tr");
     donor.forEach(data => {
-      const cell = document.createElement("td");
-      cell.textContent = data;
-      row.appendChild(cell);
+      const td = document.createElement("td");
+      td.textContent = data;
+      row.appendChild(td);
     });
     table.appendChild(row);
   });
@@ -65,18 +71,11 @@ function displayDonors(donors, headers) {
   resultSection.appendChild(table);
 }
 
-// Function to Display an Error Message
+// Display Error Messages
 function displayError(message) {
   const resultSection = document.getElementById("result");
   resultSection.innerHTML = `<p class="error">${message}</p>`;
 }
 
-// Add Event Listener to the Search Button
-document.getElementById("search-btn").addEventListener("click", () => {
-  const bloodGroupInput = document.getElementById("blood-group").value.trim();
-  if (bloodGroupInput) {
-    fetchDonors(bloodGroupInput);
-  } else {
-    displayError("Please enter a blood group.");
-  }
-});
+// Event Listener for Search Button
+document.getElementById("search-btn").addEventListener("click", fetchDonors);
