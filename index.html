@@ -1,57 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blood Donor Search</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        input {
-            padding: 10px;
-            width: 300px;
-            margin-right: 10px;
-        }
-        button {
-            padding: 10px;
-        }
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin-top: 20px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-        th {
-            background-color: #f4f4f4;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Donor Search</title>
+  <style>
+    .donor-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .donor-table th, .donor-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    .donor-table th {
+      background-color: #f2f2f2;
+      text-align: left;
+    }
+    .error {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <h1>Blood Donor Search</h1>
-    <input type="text" id="bloodGroupInput" placeholder="Enter Blood Group (e.g., A+, B-)">
-    <button onclick="searchDonors()">Search</button>
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Phone</th>
-                <th>Blood Group</th>
-                <th>Address</th>
-                <th>Last Donate Date</th>
-                <th>Donation Status</th>
-                <th>Note</th>
-            </tr>
-        </thead>
-        <tbody id="donorTableBody">
-            <!-- Donor data will appear here -->
-        </tbody>
-    </table>
+  <h1>Blood Donor Search</h1>
+  <label for="blood-group">Enter Blood Group:</label>
+  <input type="text" id="blood-group" placeholder="e.g., A+, B-, O+" />
+  <button id="search-btn">Search</button>
+  <div id="result"></div>
 
-    <script src="app.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
