@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "confident-run-448706-a6",
+  "private_key_id": "e42b970a683d2d707958ef06cbd6a55522cc6807",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDHTkUTWjG3Fr4A\nv7V5DopwMcJZRZ3SJDrSmhsfJufjnuWeaE1J7Pfrg4+yHiaCZADHqwK20x1FY2/Q\na9EY2ftQvPYpRXrDtcH4vCAKEWrE0ivjreQiqK8YSBv03lYkbVlijN45qcN0rsXI\nOUZB2lMoJPaDy3BEPjlrdBDwDrtuGTLwYmhjyaDDs7j9u/vnUhnNU7V8BhiaJSUe\nNm4ZJrOAwOgDtLfqLO+qtLhgOPGV51WuozkXoyDUVZ1tJp+n48bv75KIZ/Ryi7aB\nugmYsUUOIAjJlErXQfe3iqge3fH3Vt2jMQlymlR6SvOguHQWtSdNhr2e2pil1Km1\nwLhHMKMTAgMBAAECggEAGGpluuevNHM0Roo1tIVL/0+RM/d7zH0Eub0IOoo9GRzj\nm0LCyR4fBvqAdX0NEacnk05HUFdPfCsgzQMQQ/+cMnlbnJW24tfW0d5V/HXCwybO\nGp+4VWidvpdC2X4NRnwg2ZpRNPYvjBFHCG6/xRx2WHIiwuV+tNV8mkXHN2lOm7+B\n7NW5Dsp27rf8hUQojqMxOOLIp306N85Cz9q4RN+m7jio9Nlt0TGH/jKd60ZDflMA\n97cIOx7XW4/mA/KMQM0wQfgX+D93arRZ5HzAly76j/eL8CvR5Tn5jD6BDdPc5SLV\nn9DPombkWwpmlf27ebpEpoqQX0Aa6OOpRuXgcw6meQKBgQD4uiM8m0JNuyQ4SQBT\nxi2ZEMe5a/LBcpM2x3RI89VfH/54CG9Fy0BY/6UBgQmP94R45i/Z8wR6u34k5IQr\nHTRfLstoI9LWap+Rg6b2uijtaY3Bf5OfhXD35sahKbGs/z63SeCpR5ZnFwro0QsP\nIEeY/Wd0wE3R8p9srs0LhoXQywKBgQDNIi98gNjmCjSOGy2oAigwsvsPRAGe9jHS\nVsX3sFAj3ekoZXDSafEYMw2rfejnYR3VwtKeObXUt9GyaZdWIH1HKVnM7EbxSfNd\nGgzadtoLHgHeM1K6DLTuNQv8O7loULMHmwiuQERMOFKo7GWWVwk2mXxpYilpvELt\npOFcZqYV2QKBgQDChCeMfUt0KNfhoM29tm3wl9vqWc6mlOkmXQPHDdIfq5DB5K7I\n4XR4Za1wqK6Gxab3OeXQSCqHpVu4lHH8mcFccucmkWWQxB/4mAIaUGoziWoQGqqj\nhaNcbEGIxmeqiI9OnlsxZ8fq5W1luB4y/SahMgQXnVD+0QT25Rl8Wv8J0wKBgQCl\nfdbhkvFpZQJRQwvqZxMVds+k2TCVlflLwEWmNc/xn63isTP8DQw8gbOdjs6/HFJ9\niddxXw2at1GtphI5oaxwJKQV9uik8QwtKD8GYKw4G9VV9gHfpzCwnIs2ytghmDlX\nAXRXX/G5rBbDwTOTvlPogJsmSdMvQnqcTlChww5qwQKBgFnDWyBV+Hs15AvT3Pvx\n6u7Bp505ESOg44zZ6kKgeRGXE94SfVK3iwLjfrrxpLfuGdwum/b6o7opaHhMLLYa\n7viR9+2IiGeIpH/4uBpIaIbdVIe21Oc+oKqoJ4z/IzD71WEoLJm6lA8e9Tps4C5o\nNFC/z2r8ns+64P/ytt2lDqx1\n-----END PRIVATE KEY-----\n",
+  "client_email": "blood-donor-app-service-accoun@confident-run-448706-a6.iam.gserviceaccount.com",
+  "client_id": "110510050900241933432",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/blood-donor-app-service-accoun%40confident-run-448706-a6.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
