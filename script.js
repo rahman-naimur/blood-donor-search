@@ -1,6 +1,6 @@
 // Google Sheet Configuration
 const SHEET_ID = "1vBNliHYqx7GzHyJfPbDjqrFjVIgl0sESmEkZMQORDxQ";
-const API_KEY = "AIzaSyDzb9-RmVAWLYx9WEolocZcNm0ORvxSSl0";
+const API_KEY = "e42b970a683d2d707958ef06cbd6a55522cc6807";
 const BASE_URL = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values`;
 
 // Fetch Data from Google Sheet
